@@ -36,6 +36,15 @@ namespace Sextant.XamForms
         /// <summary>
         /// Initializes a new instance of the <see cref="NavigationView"/> class.
         /// </summary>
+        /// <param name="rootPage">The starting root page.</param>
+        public NavigationView(Page rootPage)
+            : this(RxApp.MainThreadScheduler, RxApp.TaskpoolScheduler, ViewLocator.Current, rootPage)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NavigationView"/> class.
+        /// </summary>
         /// <param name="mainScheduler">The main scheduler to scheduler UI tasks on.</param>
         /// <param name="backgroundScheduler">The background scheduler.</param>
         /// <param name="viewLocator">The view locator which will find views associated with view models.</param>

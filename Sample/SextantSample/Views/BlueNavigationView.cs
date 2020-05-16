@@ -16,6 +16,13 @@ namespace SextantSample.Views
             this.BarTextColor = Color.White;
         }
 
+        public BlueNavigationView(Page rootPage)
+            : base(RxApp.MainThreadScheduler, RxApp.TaskpoolScheduler, ViewLocator.Current, rootPage)
+        {
+            this.BarBackgroundColor = Color.Blue;
+            this.BarTextColor = Color.White;
+        }
+
         public object ViewModel { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }
 }

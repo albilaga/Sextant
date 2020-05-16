@@ -38,7 +38,8 @@ namespace SextantSample
                 .PushPage(new HomeViewModel(), null, true, false)
                 .Subscribe();
 
-            MainPage = Locator.Current.GetNavigationView();
+            //MainPage = Locator.Current.GetNavigationView();
+            MainPage = new TabbedView();
         }
 
         protected override void OnStart()
